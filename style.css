@@ -1,0 +1,56 @@
+body {
+    background-color: #CCC;
+  }
+  
+  /* make my items align*/
+  .selections {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .selection {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 6rem;
+    transition: 100ms;
+    /* I used transition to slowly grow and slowly shrink the selections*/
+  }
+  
+  .selection:hover {
+    transform: scale(1.5);
+    /* This allows the selection images to increase in size while the mouse hovers prior to clicking on the selection */
+  }
+  
+  .results {
+    margin-top: 2rem;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    /* 1fr or fraction equal size, & 2 is the number of columns*/
+    justify-items: center;
+    align-items: center;
+    /* justify and align items push text to the center*/
+  }
+  
+  .result-score {
+      /* margins provide space*/
+    margin-left: .1rem;
+    font-size: 2rem;
+    color: #333 /*gray*/;
+  }
+  
+    /* the image of the result that loses*/
+    .result-selection {
+    /* opacity blends the image into the background*/
+    opacity: .5;
+  }
+  
+  /* the image of the result of the winner*/
+  .result-selection.winner {
+    opacity: 1;
+    font-size: 4rem;
+  }
+
+  /* rem- root element font size, I learned that I prefer rem over px. */
